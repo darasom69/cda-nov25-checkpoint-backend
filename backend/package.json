@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "main": "src/index.ts",
   "scripts": {
+    "test" : "jest",
     "dev": "ts-node-dev src/index.ts",
     "resetDB": "ts-node src/db/reset.ts",
     "lint": "biome check",
@@ -38,7 +39,10 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.3.11",
+    "@types/jest": "^30.0.0",
     "@types/jsonwebtoken": "^9.0.10",
+    "jest": "^30.2.0",
+    "ts-jest": "^29.4.6",
     "typescript": "^5.6.2"
   }
 }
