@@ -1,7 +1,7 @@
 import { buildSchema } from "type-graphql";
 import { authChecker } from "./auth";
-import UserResolver from "./resolvers/UserResolver";
 import CountryResolver from "./resolvers/CountryResolver";
+import UserResolver from "./resolvers/UserResolver";
 
 export async function getSchema() {
   return buildSchema({

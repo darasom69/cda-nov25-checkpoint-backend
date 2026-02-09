@@ -1,3 +1,4 @@
+import { Length } from "class-validator";
 import { Field, InputType, Int, ObjectType } from "type-graphql";
 import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
@@ -9,7 +10,7 @@ export class Country extends BaseEntity {
   id: number;
 
   @Field()
- @Column({ type: "varchar", length: 2, unique: true })
+  @Column({ type: "varchar", length: 2, unique: true })
   code: string;
 
   @Field()
@@ -24,11 +25,14 @@ export class Country extends BaseEntity {
 @InputType()
 export class CountryInput {
   @Field()
+  @Length(2, 2)
   code: string;
 
   @Field()
+  @Length(2, 100)
   name: string;
 
   @Field()
+  @Length(2, 10)
   emoji: string;
 }
