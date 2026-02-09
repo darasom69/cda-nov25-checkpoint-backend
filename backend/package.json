@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "main": "src/index.ts",
   "scripts": {
-    "test" : "jest",
+    "test": "jest",
     "dev": "ts-node-dev src/index.ts",
     "resetDB": "ts-node src/db/reset.ts",
     "lint": "biome check",
